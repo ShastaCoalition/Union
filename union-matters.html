@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Unions raise wages, protect benefits, and strengthen communities. Here's what the data says — and what you can do today.">
+
+<!-- Open Graph for texting/social sharing -->
+<meta property="og:title" content="Worker Unions Matter to All of Us">
+<meta property="og:description" content="You should support unions even if you're not in one. Here's why — backed by data and history.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://shastacoalition.github.io/Union/union-wordcloud.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://shastacoalition.github.io/Union/union-wordcloud.png">
+
+<title>Worker Unions Matter to All of Us</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --crimson: #C41E3A;
+    --crimson-dark: #8B1528;
+    --gold: #D4A843;
+    --gold-light: #F5D78E;
+    --cream: #FAF7F2;
+    --warm-white: #FFFDF9;
+    --charcoal: #1C1C1E;
+    --slate: #3D3D42;
+    --mid: #6B6B73;
+    --border: #E8E2D9;
+    --success: #2D7D46;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ─────────────────────────────────── */
+  .hero {
+    background: var(--crimson);
+    background-image: 
+      radial-gradient(ellipse at 80% 20%, rgba(212,168,67,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 10% 90%, rgba(0,0,0,0.25) 0%, transparent 50%);
+    color: white;
+    padding: 56px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.025) 40px,
+      rgba(255,255,255,0.025) 41px
+    );
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.1s;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 10vw, 80px);
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.2s;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 300;
+    max-width: 520px;
+    margin: 0 auto 32px;
+    opacity: 0.88;
+    animation: fadeUp 0.6s ease forwards 0.35s;
+    opacity: 0;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 40px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold-light);
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.5s;
+  }
+
+  /* ── STAT STRIP ───────────────────────────── */
+  .stat-strip {
+    background: var(--charcoal);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    text-align: center;
+  }
+
+  .stat-item {
+    padding: 28px 16px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards;
+  }
+  .stat-item:nth-child(1) { animation-delay: 0.5s; }
+  .stat-item:nth-child(2) { animation-delay: 0.65s; }
+  .stat-item:nth-child(3) { animation-delay: 0.8s; border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 6vw, 40px);
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+  }
+
+  /* ── SECTION WRAPPER ─────────────────────── */
+  .section {
+    padding: 56px 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--warm-white);
+  }
+
+  /* Full-width section wrapper to break dark bleed */
+  .section-wrap {
+    background: var(--warm-white);
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 6vw, 38px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--charcoal);
+  }
+
+  .section p {
+    font-size: 16px;
+    color: var(--slate);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* ── WAGE VISUAL ─────────────────────────── */
+  .wage-block {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    margin: 32px 0;
+    border: 1px solid var(--border);
+  }
+
+  .wage-compare {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .wage-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .wage-tag {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    width: 88px;
+    flex-shrink: 0;
+    line-height: 1.2;
+  }
+
+  .wage-tag.union { color: var(--crimson); }
+  .wage-tag.nonunion { color: var(--mid); }
+
+  .wage-bar-wrap { flex: 1; }
+
+  .wage-bar {
+    height: 38px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: barGrow 1s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+
+  .wage-bar.union {
+    background: var(--crimson);
+    width: 100%;
+    animation-delay: 0.8s;
+  }
+
+  .wage-bar.nonunion {
+    background: var(--mid);
+    width: 83.6%;
+    animation-delay: 1s;
+  }
+
+  .wage-diff {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--slate);
+  }
+
+  .wage-diff strong { color: var(--success); }
+
+  /* ── BENEFIT CARDS ───────────────────────── */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 28px 0;
+  }
+
+  .benefit-card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px 18px;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--crimson);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+  }
+
+  .benefit-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .benefit-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--crimson);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .benefit-vs {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--mid);
+    margin-bottom: 6px;
+  }
+
+  .benefit-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.3;
+  }
+
+  /* ── MYTH BUSTERS ────────────────────────── */
+  .myths {
+    background: var(--charcoal);
+    padding: 56px 24px;
+  }
+
+  .myths-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .myths .section-label { color: var(--gold); }
+  .myths h2 { color: white; margin-bottom: 28px; }
+
+  .myth-item {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  .myth-item:last-child { border-bottom: none; }
+
+  .myth-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .myth-question {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.4;
+  }
+
+  .myth-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: transform 0.3s ease, background 0.2s;
+  }
+
+  .myth-item.open .myth-icon {
+    transform: rotate(45deg);
+    background: var(--crimson);
+  }
+
+  .myth-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .myth-answer-inner {
+    padding: 14px 0 0;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
+  .myth-answer-inner strong { color: var(--gold); }
+
+  /* ── HISTORY STRIP ───────────────────────── */
+  .history-strip {
+    background: var(--gold);
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .history-strip p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: 700;
+    color: var(--crimson-dark);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+
+  .history-strip span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--crimson-dark);
+    opacity: 0.7;
+    margin-top: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  /* ── NUDGE / CTA ─────────────────────────── */
+  .cta-section {
+    background: white;
+    padding: 56px 24px 64px;
+    text-align: center;
+    position: relative;
+  }
+
+  .social-proof-bar {
+    background: var(--cream);
+    border-radius: 40px;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+  }
+
+  .avatars {
+    display: flex;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    background: var(--crimson);
+    color: white;
+    font-weight: 600;
+  }
+  .avatar:first-child { margin-left: 0; }
+  .avatar:nth-child(2) { background: var(--crimson-dark); }
+  .avatar:nth-child(3) { background: #8B4513; }
+  .avatar:nth-child(4) { background: var(--gold); color: var(--charcoal); }
+
+  .social-proof-text {
+    font-size: 13px;
+    color: var(--slate);
+    font-weight: 500;
+  }
+  .social-proof-text strong { color: var(--charcoal); }
+
+  .cta-section .section-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 7vw, 44px);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--charcoal);
+    max-width: 560px;
+    margin: 0 auto 16px;
+  }
+
+  .cta-sub {
+    font-size: 16px;
+    color: var(--mid);
+    max-width: 440px;
+    margin: 0 auto 12px;
+    line-height: 1.6;
+  }
+
+  .time-commitment {
+    display: inline-block;
+    background: #E8F5EE;
+    color: var(--success);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 40px;
+    margin-bottom: 32px;
+  }
+
+  /* Nudge: Loss framing message */
+  .loss-frame {
+    background: #FFF3CD;
+    border: 1px solid #F0D060;
+    border-radius: 12px;
+    padding: 16px 20px;
+    max-width: 480px;
+    margin: 0 auto 32px;
+    font-size: 14px;
+    color: #7A5C00;
+    line-height: 1.5;
+  }
+  .loss-frame strong { color: #5C4400; }
+
+  /* CTA Buttons */
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto 24px;
+  }
+
+  .btn-primary {
+    display: block;
+    background: linear-gradient(180deg, #D4253F 0%, #B01830 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 18px 32px;
+    border-radius: 14px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 
+      0 6px 0px #7A0F1F,
+      0 8px 16px rgba(196,30,58,0.5),
+      0 2px 4px rgba(0,0,0,0.2),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    position: relative;
+    top: 0;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(2px);
+    box-shadow: 
+      0 4px 0px #7A0F1F,
+      0 6px 12px rgba(196,30,58,0.45),
+      0 1px 3px rgba(0,0,0,0.2),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+
+  .btn-primary:active {
+    transform: translateY(5px);
+    box-shadow: 
+      0 1px 0px #7A0F1F,
+      0 3px 8px rgba(196,30,58,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+
+  .btn-secondary {
+    display: block;
+    background: linear-gradient(180deg, #DDB84E 0%, #C4992A 100%);
+    color: var(--charcoal);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 18px 32px;
+    border-radius: 14px;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.35);
+    letter-spacing: -0.01em;
+    text-align: center;
+    box-shadow: 
+      0 6px 0px #8A6510,
+      0 8px 16px rgba(180,140,30,0.5),
+      0 2px 4px rgba(0,0,0,0.15),
+      inset 0 1px 0 rgba(255,255,255,0.35);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    position: relative;
+    top: 0;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(2px);
+    box-shadow: 
+      0 4px 0px #8A6510,
+      0 6px 12px rgba(180,140,30,0.45),
+      0 1px 3px rgba(0,0,0,0.15),
+      inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+
+  .btn-secondary:active {
+    transform: translateY(5px);
+    box-shadow: 
+      0 1px 0px #8A6510,
+      0 3px 8px rgba(180,140,30,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+
+  .share-nudge {
+    font-size: 13px;
+    color: var(--mid);
+    margin-top: 8px;
+  }
+
+  .share-nudge strong { color: var(--charcoal); }
+
+  /* ── STEPS ───────────────────────────────── */
+  .steps {
+    background: var(--cream);
+    padding: 48px 24px;
+  }
+
+  .steps-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 28px;
+  }
+
+  .step {
+    text-align: center;
+    padding: 24px 16px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .step-num {
+    width: 40px;
+    height: 40px;
+    background: var(--crimson);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+  }
+
+  .step-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+
+  .step-desc {
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.5;
+  }
+
+  /* ── STARBUCKS COMPARISON ────────────────── */
+  .sbux-compare {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    margin: 28px 0;
+  }
+
+  .sbux-card {
+    flex: 1;
+    border-radius: 16px;
+    padding: 24px 20px;
+    position: relative;
+  }
+
+  .sbux-bad {
+    background: #FEF0F0;
+    border: 2px solid #F5BBBB;
+  }
+
+  .sbux-good {
+    background: #EEF6EE;
+    border: 2px solid #BBD9BB;
+  }
+
+  .sbux-vs {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--mid);
+    flex-shrink: 0;
+    padding: 0 4px;
+  }
+
+  .sbux-flag {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--mid);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .sbux-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 8vw, 52px);
+    font-weight: 900;
+    color: var(--charcoal);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .sbux-desc {
+    font-size: 12px;
+    color: var(--slate);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+
+  .sbux-divider {
+    height: 1px;
+    background: rgba(0,0,0,0.1);
+    margin: 14px 0;
+  }
+
+  .sbux-contracts-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 7vw, 46px);
+    font-weight: 900;
+    color: var(--crimson);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .sbux-contracts-num.good {
+    color: var(--success);
+  }
+
+  .sbux-contracts-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--mid);
+    margin-bottom: 12px;
+  }
+
+  .sbux-note {
+    font-size: 11.5px;
+    color: var(--slate);
+    line-height: 1.55;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 12px;
+    margin-top: 4px;
+  }
+
+  .sbux-explainer {
+    background: white;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    padding: 18px 20px;
+    margin: 4px 0 20px;
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.65;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .sbux-explainer strong { color: var(--charcoal); }
+
+  @media (max-width: 480px) {
+    .sbux-compare { flex-direction: column; }
+    .sbux-vs { justify-content: center; padding: 4px 0; }
+  }
+
+  /* ── PRO ACT SECTION ─────────────────────── */
+  .proact-section {
+    background: var(--charcoal);
+    background-image:
+      radial-gradient(ellipse at 90% 10%, rgba(212,168,67,0.12) 0%, transparent 55%),
+      radial-gradient(ellipse at 5% 90%, rgba(196,30,58,0.15) 0%, transparent 50%);
+    padding: 60px 24px;
+    text-align: center;
+  }
+
+  .proact-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .proact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 0 0 36px;
+    text-align: left;
+  }
+
+  .proact-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 18px 16px;
+    transition: background 0.2s;
+  }
+
+  .proact-item:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .proact-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .proact-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .proact-body {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.55;
+  }
+
+  /* PAWA Spotlight Box */
+  .pawa-box {
+    background: linear-gradient(135deg, rgba(212,168,67,0.12) 0%, rgba(255,255,255,0.04) 100%);
+    border: 1.5px solid var(--gold);
+    border-radius: 16px;
+    margin: 0 0 24px;
+    overflow: hidden;
+  }
+
+  .pawa-header {
+    background: rgba(212,168,67,0.15);
+    padding: 16px 22px;
+    border-bottom: 1px solid rgba(212,168,67,0.25);
+  }
+
+  .pawa-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .pawa-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: 900;
+    color: white;
+    line-height: 1.2;
+  }
+
+  .pawa-body {
+    padding: 20px 22px;
+  }
+
+  .pawa-body p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    margin: 0 0 14px;
+  }
+
+  .pawa-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 18px 0 18px;
+  }
+
+  .pawa-fact {
+    background: rgba(0,0,0,0.25);
+    border-radius: 10px;
+    padding: 14px 10px;
+    text-align: center;
+  }
+
+  .pawa-fact-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 5vw, 30px);
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .pawa-fact-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.4;
+  }
+
+  .pawa-link {
+    display: block;
+    background: var(--gold);
+    color: var(--dark-bg);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 6px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .pawa-link:hover {
+    background: #f0c84a;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 500px) {
+    .pawa-facts { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .pawa-fact { padding: 10px 6px; }
+    .pawa-body { padding: 16px; }
+    .pawa-header { padding: 14px 16px; }
+  }
+
+  /* PRO Act Reality Box */
+  .proact-reality-box {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: rgba(212, 168, 67, 0.1);
+    border: 1px solid rgba(212, 168, 67, 0.35);
+    border-radius: 14px;
+    padding: 22px 20px;
+    margin: 0 0 24px;
+    text-align: left;
+  }
+
+  .proact-reality-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .proact-reality-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .proact-reality-body {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    margin: 0 0 8px;
+  }
+
+  .proact-reality-body:last-child { margin-bottom: 0; }
+
+  /* PRO Act CTA Box */
+  .proact-cta-box {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 36px 32px;
+    margin-top: 8px;
+  }
+
+  .proact-cta-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .proact-cta-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 5vw, 32px);
+    font-weight: 900;
+    color: white;
+    margin-bottom: 12px;
+    line-height: 1.15;
+  }
+
+  .proact-cta-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    max-width: 460px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+
+  .proact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .btn-proact-primary {
+    display: block;
+    background: linear-gradient(180deg, #D4253F 0%, #B01830 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 28px;
+    border-radius: 13px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    box-shadow:
+      0 6px 0px #7A0F1F,
+      0 8px 20px rgba(196,30,58,0.45),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-proact-primary:hover {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0px #7A0F1F, 0 6px 14px rgba(196,30,58,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+
+  .btn-proact-primary:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px 0px #7A0F1F, 0 3px 8px rgba(196,30,58,0.3);
+  }
+
+  .btn-proact-secondary {
+    display: block;
+    background: linear-gradient(180deg, #DDB84E 0%, #C4992A 100%);
+    color: var(--charcoal);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 28px;
+    border-radius: 13px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    box-shadow:
+      0 6px 0px #8A6510,
+      0 8px 20px rgba(180,140,30,0.4),
+      inset 0 1px 0 rgba(255,255,255,0.3);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-proact-secondary:hover {
+    transform: translateY(2px);
+    box-shadow: 0 4px 0px #8A6510, 0 6px 14px rgba(180,140,30,0.35), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+
+  .btn-proact-secondary:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px 0px #8A6510, 0 3px 8px rgba(180,140,30,0.25);
+  }
+
+  @media (min-width: 600px) {
+    .proact-buttons { flex-direction: row; }
+    .btn-proact-primary, .btn-proact-secondary { flex: 1; }
+  }
+
+  @media (max-width: 500px) {
+    .proact-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 380px) {
+    .proact-grid { grid-template-columns: 1fr; }
+    .proact-cta-box { padding: 24px 18px; }
+  }
+
+  /* ── PENSION CALLOUT ─────────────────────── */
+  .pension-callout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin: 28px 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+
+  .pension-then, .pension-now {
+    flex: 1;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .pension-then {
+    background: #EEF6EE;
+    border: 1px solid #BBD9BB;
+  }
+
+  .pension-now {
+    background: #FEF0F0;
+    border: 1px solid #F5BBBB;
+  }
+
+  .pension-era {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+
+  .pension-icon { font-size: 32px; margin-bottom: 8px; }
+
+  .pension-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .pension-sub {
+    font-size: 11px;
+    color: var(--mid);
+    line-height: 1.4;
+  }
+
+  .pension-arrow {
+    font-size: 24px;
+    color: var(--mid);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 400px) {
+    .pension-callout { flex-direction: column; gap: 12px; }
+    .pension-arrow { transform: rotate(90deg); }
+  }
+
+  /* ── FOOTER ──────────────────────────────── */
+  footer {
+    background: var(--charcoal);
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  footer a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+  }
+
+  footer a:hover { color: var(--gold); }
+
+  /* ── DIVIDER ─────────────────────────────── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ── ANIMATIONS ──────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes barGrow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  /* ── RESPONSIVE ──────────────────────────── */
+  @media (max-width: 500px) {
+    .benefits-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .benefit-card { padding: 16px 14px; }
+    .benefit-pct { font-size: 24px; }
+    .steps-grid { grid-template-columns: 1fr; gap: 12px; }
+    .step { padding: 20px 20px; text-align: left; display: flex; gap: 16px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; margin: 0; }
+    .stat-label { font-size: 10px; }
+    .wage-tag { width: 72px; font-size: 11px; }
+  }
+
+  @media (min-width: 700px) {
+    .hero { padding: 80px 40px 70px; }
+    .benefits-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .steps-grid { grid-template-columns: repeat(3, 1fr); }
+    .wage-compare { flex-direction: column; }
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-eyebrow">Worker Power · 2025 Data</div>
+  <h1>Worker <em>Unions</em><br>Matter to<br>All of Us.</h1>
+  <p class="hero-sub">You should be a supporter of unions — even if you're not in one yet. Here's why it affects every single worker in America.</p>
+  <div class="hero-badge">⚡ Takes 2 minutes to explore</div>
+</section>
+
+<!-- ── STAT STRIP ── -->
+<div class="stat-strip">
+  <div class="stat-item">
+    <div class="stat-num">$230</div>
+    <div class="stat-label">More per week<br>union vs. non</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">95%</div>
+    <div class="stat-label">Union workers<br>with retirement</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">70%</div>
+    <div class="stat-label">Americans<br>support unions</div>
+  </div>
+</div>
+
+<!-- ── LIGHT CONTENT AREA ── -->
+<div style="background: var(--warm-white);">
+
+<!-- ── WAGE SECTION ── -->
+<div class="section-wrap">
+<section class="section reveal">
+  <div class="section-label">The Pay Gap</div>
+  <h2>Your paycheck tells the story.</h2>
+  <p>The numbers are stark. Union workers take home significantly more every single week — and that gap compounds into hundreds of thousands of dollars over a career.</p>
+
+  <div class="wage-block">
+    <div class="wage-compare">
+      <div class="wage-row">
+        <div class="wage-tag union">Union<br>Worker</div>
+        <div class="wage-bar-wrap">
+          <div class="wage-bar union">$1,404/wk</div>
+        </div>
+      </div>
+      <div class="wage-row">
+        <div class="wage-tag nonunion">Non-union<br>Worker</div>
+        <div class="wage-bar-wrap">
+          <div class="wage-bar nonunion">$1,174/wk</div>
+        </div>
+      </div>
+    </div>
+    <div class="wage-diff">
+      That's <strong>$11,960 more per year</strong> — enough to cover six months of groceries, a full year of utility bills, or two semesters of community college tuition.<br>
+      <small style="color:var(--mid);font-size:12px;margin-top:6px;display:block;">Source: Bureau of Labor Statistics, Union Members 2025</small>
+    </div>
+  </div>
+
+  <p>And wages are just the beginning.</p>
+</section>
+</div><!-- end section-wrap -->
+
+<div class="divider"></div>
+
+<!-- ── BENEFITS SECTION ── -->
+<section class="section reveal" style="background: var(--warm-white);">
+  <div class="section-label">The Benefits Gap</div>
+  <h2>What you lose without a union.</h2>
+  <p>Being union-represented is the single biggest predictor of whether you'll have retirement security, health coverage, and paid leave.</p>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <span class="benefit-icon">🏥</span>
+      <div class="benefit-pct">95%</div>
+      <div class="benefit-vs">vs. 71% non-union</div>
+      <div class="benefit-label">Health Coverage</div>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">🏦</span>
+      <div class="benefit-pct">95%</div>
+      <div class="benefit-vs">vs. 72% non-union</div>
+      <div class="benefit-label">Retirement Plan</div>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">🏖️</span>
+      <div class="benefit-pct">97%</div>
+      <div class="benefit-vs">vs. 87% non-union</div>
+      <div class="benefit-label">Paid Leave</div>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">⚖️</span>
+      <div class="benefit-pct">4.3%</div>
+      <div class="benefit-vs">vs. 3.3% non-union</div>
+      <div class="benefit-label">Annual Wage Growth</div>
+    </div>
+  </div>
+
+  <p style="font-size:13px;color:var(--mid);">Sources: BLS Employee Benefits Survey 2024 · Employment Cost Index Dec 2025</p>
+</section>
+
+</div><!-- end light content area -->
+
+<!-- ── HISTORY STRIP ── -->
+<div class="history-strip">
+  <p>"Unions gave us the 40-hour work week, child labor laws, overtime pay, and workplace safety rules. Every benefit you enjoy at work came from organized workers who demanded better."</p>
+  <span>Labor history — the rights you already have, and who won them</span>
+</div>
+
+<!-- ── PENSION / MIDDLE CLASS SECTION ── -->
+<div style="background: var(--warm-white);">
+<section class="section reveal">
+  <div class="section-label">What We Lost — And Why</div>
+  <h2>Our grandparents had it better. Here's why.</h2>
+  <p>When unions were strong, private employers routinely provided <strong>pensions</strong> — guaranteed retirement income for life. You gave a company your career; they gave you security in return.</p>
+  <p>Then corporations got greedy. Pensions were quietly eliminated, replaced by 401(k)s that shifted all the risk onto workers. Today, <strong>fewer than 15% of private-sector workers have a pension</strong> — down from over 60% in the 1980s. That security didn't disappear by accident. It was taken.</p>
+
+  <div class="pension-callout">
+    <div class="pension-then">
+      <div class="pension-era">Then · 1950s–1970s</div>
+      <div class="pension-icon">🏠</div>
+      <div class="pension-label">Pension + job security</div>
+      <div class="pension-sub">Union membership ~35% · Middle class thriving</div>
+    </div>
+    <div class="pension-arrow">→</div>
+    <div class="pension-now">
+      <div class="pension-era">Now · 2025</div>
+      <div class="pension-icon">📉</div>
+      <div class="pension-label">Pension nearly extinct</div>
+      <div class="pension-sub">Private sector union membership: 5.9%</div>
+    </div>
+  </div>
+
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,6vw,38px);font-weight:900;line-height:1.15;color:var(--charcoal);margin:36px 0 16px;">We rebuild the middle class — and revive the American Dream — by rebuilding and expanding unions.</h2>
+
+  <p>This didn't happen by accident. It happened because union power declined — and when workers lost their collective voice, corporations had little reason to share their profits. <strong>Stronger unions are the proven path back to a thriving middle class.</strong> That's why this matters to everyone, union member or not.</p>
+</section>
+</div><!-- end pension white area -->
+
+<!-- ── STARBUCKS / CHILE SECTION ── -->
+<div style="background: var(--warm-white);">
+<section class="section reveal">
+  <div class="section-label">A Vote Is Just The First Step</div>
+  <h2>Winning a union election means nothing without a contract.</h2>
+  <p>You've seen the headlines — Starbucks workers unionizing across America. Hundreds of stores. Thousands of workers. Victory, right? <strong>Not so fast.</strong></p>
+  <p>A union card and a union contract are two entirely different things. Without a contract, an employer can ignore the union, stall indefinitely, and keep doing exactly what they were doing before. <strong>A union without a contract is a door with no lock.</strong></p>
+
+  <div class="sbux-compare">
+    <div class="sbux-card sbux-bad">
+      <div class="sbux-flag">🇺🇸 United States</div>
+      <div class="sbux-num">666</div>
+      <div class="sbux-desc">Starbucks stores have voted to unionize</div>
+      <div class="sbux-divider"></div>
+      <div class="sbux-contracts-num">0</div>
+      <div class="sbux-contracts-label">Contracts signed</div>
+      <div class="sbux-note">4 years of organizing. Hundreds of strikes. Still no contract. Starbucks has committed more labor law violations than any employer in modern U.S. history — and paid almost nothing for it.</div>
+    </div>
+    <div class="sbux-vs">vs.</div>
+    <div class="sbux-card sbux-good">
+      <div class="sbux-flag">🇨🇱 Chile</div>
+      <div class="sbux-num">100%</div>
+      <div class="sbux-desc">of Starbucks stores covered by a contract</div>
+      <div class="sbux-divider"></div>
+      <div class="sbux-contracts-num good">✓ Won &amp; Renewed</div>
+      <div class="sbux-contracts-label">Contract won in 2022 — then renegotiated &amp; strengthened in 2025</div>
+      <div class="sbux-note">Chilean workers first unionized in 2009. After years of strikes and hunger strikes, they won a national contract in 2022 covering all 176 stores. Then in 2025, when that contract expired, they went on a 25-day strike and won an even <em>better</em> deal — including paid parental leave for all genders. That's what a real union looks like.</div>
+    </div>
+  </div>
+
+  <div class="sbux-explainer">
+    <strong>Why does Chile succeed where the US fails?</strong> Chilean law prohibits employers from running anti-union campaigns against their own workers. In the US, it's perfectly legal — and corporations spend billions doing exactly that. Starbucks alone has racked up over 100 complaints of illegal union-busting filed with the NLRB. The fines? Pennies compared to their profits.
+  </div>
+
+  <p>This isn't a union failure. It's a <strong>law failure</strong>. And there's a bill in Congress right now to fix it.</p>
+</section>
+</div>
+
+<!-- ── PRO ACT SECTION ── -->
+<div class="proact-section">
+  <div class="proact-inner reveal">
+    <div class="section-label" style="color:var(--gold);">The Law That Would Fix This</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,6vw,40px);font-weight:900;color:white;line-height:1.1;margin-bottom:16px;">The PRO Act: what it does, and why it's stalled.</h2>
+    <p style="color:rgba(255,255,255,0.75);font-size:15px;max-width:580px;margin:0 auto 28px;line-height:1.7;">The <strong style="color:white;">Protecting the Right to Organize (PRO) Act</strong> is the most significant proposed update to US labor law in 80 years. It would directly fix everything wrong with the Starbucks situation — and millions like it. Here's what it would do:</p>
+
+    <div class="proact-grid">
+      <div class="proact-item">
+        <div class="proact-icon">⚖️</div>
+        <div class="proact-title">Forces First Contracts</div>
+        <div class="proact-body">If a company stalls, a neutral arbitrator steps in and sets contract terms. The Starbucks 4-year delay would be illegal.</div>
+      </div>
+      <div class="proact-item">
+        <div class="proact-icon">🚫</div>
+        <div class="proact-title">Bans Union-Busting Meetings</div>
+        <div class="proact-body">Ends mandatory "captive audience" meetings where bosses pressure workers against their own union — on the clock, no choice but to attend.</div>
+      </div>
+      <div class="proact-item">
+        <div class="proact-icon">💰</div>
+        <div class="proact-title">Real Penalties for Violations</div>
+        <div class="proact-body">Fines up to $50,000 per violation, $100,000 for repeat offenders. Right now the financial penalty for illegal union-busting is essentially nothing.</div>
+      </div>
+      <div class="proact-item">
+        <div class="proact-icon">🔒</div>
+        <div class="proact-title">Protects Organizers From Firing</div>
+        <div class="proact-body">Requires immediate reinstatement of workers illegally fired for union activity while their case is pending — not years later after appeals.</div>
+      </div>
+      <div class="proact-item">
+        <div class="proact-icon">🚗</div>
+        <div class="proact-title">Covers Gig Workers</div>
+        <div class="proact-body">Uber, DoorDash, Lyft drivers are currently excluded from all labor law protections. The PRO Act brings them in.</div>
+      </div>
+      <div class="proact-item">
+        <div class="proact-icon">📜</div>
+        <div class="proact-title">Modeled on What Works</div>
+        <div class="proact-body">Chile's labor law — which bans employer anti-union campaigns — is why Chilean Starbucks workers have a contract and US workers don't. The PRO Act brings us closer to that standard.</div>
+      </div>
+    </div>
+
+    <!-- Reality check box -->
+    <div class="proact-reality-box">
+      <div class="proact-reality-icon">⚠️</div>
+      <div>
+        <div class="proact-reality-title">The honest truth: the PRO Act is blocked — for now.</div>
+        <p class="proact-reality-body">The PRO Act was reintroduced in March 2025, but with Republicans controlling both chambers and the current administration actively rolling back union rights, it has no path to passing this Congress. The 2026 midterms are the real lever. In the meantime, the fight is happening in the states — Illinois, California, New York, and Vermont are all advancing their own labor protections right now.</p>
+        <p class="proact-reality-body">But there <em>is</em> a bill with real momentum in the Senate right now. And it needs your voice.</p>
+      </div>
+    </div>
+
+    <!-- PAWA spotlight -->
+    <div class="pawa-box">
+      <div class="pawa-header">
+        <div class="pawa-badge">🔥 Active — Senate Needs to Act Now</div>
+        <div class="pawa-title">Protect America's Workforce Act (PAWA)</div>
+      </div>
+      <div class="pawa-body">
+        <p>In December 2025, something remarkable happened. The House passed the <strong>Protect America's Workforce Act</strong> 231–195 — with 20 Republicans crossing the aisle to join every Democrat. It was the first time the House voted to overturn a Trump executive order during his second term. They did it via a rare discharge petition, forcing a vote over Speaker Johnson's objections because the support was simply too broad to ignore.</p>
+        <p>The bill responds directly to Trump's March 2025 executive order that stripped collective bargaining rights from roughly <strong>1 million federal workers</strong> — nurses, firefighters, food inspectors, veterans' care workers, air traffic controllers — under a sweeping "national security" claim that courts and legal experts have called a sham.</p>
+
+        <div class="pawa-facts">
+          <div class="pawa-fact">
+            <div class="pawa-fact-num">1M+</div>
+            <div class="pawa-fact-label">Federal workers who lost<br>bargaining rights</div>
+          </div>
+          <div class="pawa-fact">
+            <div class="pawa-fact-num">231</div>
+            <div class="pawa-fact-label">House votes to pass it<br>(20 Republicans voted yes)</div>
+          </div>
+          <div class="pawa-fact">
+            <div class="pawa-fact-num">⅓</div>
+            <div class="pawa-fact-label">Of federal workers<br>in unions are veterans</div>
+          </div>
+        </div>
+
+        <p>The Senate companion bill has the entire Democratic caucus plus <strong>Sens. Lisa Murkowski (R-AK) and Susan Collins (R-Maine)</strong> as co-sponsors. It needs a few more Republicans to clear the 60-vote filibuster threshold. This is the bill where your senator's phone ringing actually matters right now.</p>
+
+        <a href="https://act.aflcio.org/call_campaigns/call-sign-the-discharge-petition-and-pass-the-protect-americas-workforce-act/" target="_blank" rel="noopener noreferrer" class="pawa-link">
+          📞 Tell Your Senator to Pass PAWA — via AFL-CIO →
+        </a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="proact-cta-box">
+      <div class="proact-cta-eyebrow">⚡ What you can do right now</div>
+      <div class="proact-cta-headline">Stay in the fight. Support Starbucks workers directly.</div>
+      <p class="proact-cta-sub">The most meaningful action right now isn't a petition to a CEO — it's putting money directly in the hands of striking workers who are losing wages to fight for all of us. And staying connected to the broader labor movement.</p>
+      <div class="proact-buttons">
+        <a href="https://www.paypal.com/ncp/payment/5AFGEN89WKKCN" target="_blank" rel="noopener noreferrer" class="btn-proact-primary">
+          💵 Donate to the Strike Fund
+        </a>
+        <a href="https://sbworkersunited.org/take-action/" target="_blank" rel="noopener noreferrer" class="btn-proact-secondary">
+          ✊ Sign the No Contract, No Coffee Pledge →
+        </a>
+      </div>
+      <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:16px;">Strike fund via Starbucks Workers United · sbworkersunited.org · PAWA action via AFL-CIO · act.aflcio.org</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── MYTH BUSTERS ── -->
+<div class="myths">
+  <div class="myths-inner">
+    <div class="section-label">Common Questions</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,5vw,34px);color:white;margin-bottom:28px;">Things people wonder about unions.</h2>
+
+    <div class="myth-item" onclick="toggleMyth(this)">
+      <div class="myth-q">
+        <div class="myth-question">"I can negotiate for myself — I don't need a union."</div>
+        <div class="myth-icon">+</div>
+      </div>
+      <div class="myth-answer">
+        <div class="myth-answer-inner">You can — but alone, you're one person. A union is <strong>collective bargaining power</strong>: your employer must legally negotiate with the group. Nonunion workers asking for raises individually have no legal protection from retaliation. Union workers do. The data proves it: union wages are $230/week higher than non-union, on average.</div>
+      </div>
+    </div>
+
+    <div class="myth-item" onclick="toggleMyth(this)">
+      <div class="myth-q">
+        <div class="myth-question">"Unions are just for factory workers or blue-collar jobs."</div>
+        <div class="myth-icon">+</div>
+      </div>
+      <div class="myth-answer">
+        <div class="myth-answer-inner">Not even close. Today, unions represent teachers, nurses, journalists, tech workers, baristas, grad students, actors, and flight attendants. <strong>The fastest-growing union campaigns are in service industries</strong> — Starbucks, Amazon, REI — and the UAW recently expanded to white-collar fields. If you work for someone else, a union can benefit you.</div>
+      </div>
+    </div>
+
+    <div class="myth-item" onclick="toggleMyth(this)">
+      <div class="myth-q">
+        <div class="myth-question">"Dues aren't worth it — I'd lose money."</div>
+        <div class="myth-icon">+</div>
+      </div>
+      <div class="myth-answer">
+        <div class="myth-answer-inner">Union dues average 1–2% of wages. Union workers earn <strong>$11,960 more per year</strong> than their nonunion peers. Even at 2% dues on a $1,404/week wage — that's about $1,460/year. The math is clear: union membership is one of the highest-return investments a worker can make.</div>
+      </div>
+    </div>
+
+    <div class="myth-item" onclick="toggleMyth(this)">
+      <div class="myth-q">
+        <div class="myth-question">"Unions are too political and I don't agree with their politics."</div>
+        <div class="myth-icon">+</div>
+      </div>
+      <div class="myth-answer">
+        <div class="myth-answer-inner">You get to vote. <strong>Union members vote on contracts, leadership, and endorsements</strong> — it's not a top-down institution. And your workplace rights — safety, fair pay, protection from arbitrary firing — aren't political. They're your life. A 2024 Gallup poll shows 70% of Americans support unions, cutting across party lines.</div>
+      </div>
+    </div>
+
+    <div class="myth-item" onclick="toggleMyth(this)">
+      <div class="myth-q">
+        <div class="myth-question">"My company would punish us for organizing."</div>
+        <div class="myth-icon">+</div>
+      </div>
+      <div class="myth-answer">
+        <div class="myth-answer-inner">Federal law (the NLRA) <strong>makes it illegal</strong> for employers to fire, threaten, or retaliate against workers for union organizing. Employers do sometimes break that law — which is why the PRO Act proposes stronger penalties. Knowing your rights is the first step. The DOL's WORK Center (workcenter.gov) is a free resource to learn them.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── STEPS ── -->
+<div class="steps">
+  <div class="steps-inner reveal">
+    <div class="section-label">Getting Started</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,5vw,34px);color:var(--charcoal);margin-bottom:4px;">You don't have to do this alone.</h2>
+    <p style="color:var(--mid);font-size:15px;">Three small steps, any of which you can take right now.</p>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Know Your Rights</div>
+          <div class="step-desc">Visit workcenter.gov — the DOL's free resource explaining exactly what you're legally protected to do.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Find Your Union</div>
+          <div class="step-desc">Search AFL-CIO's union finder by industry. Most have free informational sessions with no commitment required.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Talk to a Coworker</div>
+          <div class="step-desc">The most powerful thing you can do is a one-on-one conversation. You don't need to be an organizer to start one.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA / NUDGE SECTION ── -->
+<section class="cta-section reveal">
+
+  <!-- Social proof nudge -->
+  <div class="social-proof-bar">
+    <div class="avatars">
+      <div class="avatar">M</div>
+      <div class="avatar">J</div>
+      <div class="avatar">R</div>
+      <div class="avatar">S</div>
+    </div>
+    <div class="social-proof-text"><strong>16.5 million workers</strong> are represented by a union today</div>
+  </div>
+
+  <div class="section-label">Take Action</div>
+  <h2>You don't have to be in a union to support one.</h2>
+  <p class="cta-sub">Support the movement. Share what you've learned. And if you work for someone else — find out what a union could mean for your workplace.</p>
+
+  <div class="time-commitment">✓ Takes less than 5 minutes to explore</div>
+
+  <!-- Loss aversion nudge -->
+  <div class="loss-frame">
+    ⚠️ When unions weaken, <strong>everyone loses</strong> — not just union members. Wages stagnate, benefits disappear, and corporations pocket the difference. The decline of union membership from 35% to under 10% tracks almost perfectly with the decline of the American middle class. That's not a coincidence.
+  </div>
+
+  <div class="cta-buttons">
+    <a href="https://www.paypal.com/ncp/payment/5AFGEN89WKKCN" target="_blank" rel="noopener noreferrer" class="btn-primary">
+      💵 Donate to the Starbucks Strike Fund
+    </a>
+    <a href="https://sbworkersunited.org/take-action/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+      ✊ Sign the No Contract, No Coffee Pledge →
+    </a>
+  </div>
+
+  <!-- Share nudge -->
+  <p class="share-nudge">Know someone who'd benefit from this? <strong>Forward this page.</strong><br>The more people know, the stronger we all get.</p>
+
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>
+    Sources: <a href="https://www.bls.gov/news.release/union2.nr0.htm" target="_blank">BLS Union Members 2025</a> · 
+    <a href="https://www.bls.gov/opub/ted/2025/labor-day-a-closer-look-at-wages-and-benefits-for-unionized-workers.htm" target="_blank">BLS Benefits Survey 2024</a> · 
+    <a href="https://www.epi.org/research/unions-and-labor-standards/" target="_blank">Economic Policy Institute</a> · 
+    <a href="https://www.workcenter.gov/" target="_blank">DOL WORK Center</a> · 
+    Gallup 2024 Union Approval Poll<br><br>
+    This page is for educational purposes. Share freely.
+  </p>
+</footer>
+
+<script>
+  // Accordion myth busters
+  function toggleMyth(el) {
+    const answer = el.querySelector('.myth-answer');
+    const isOpen = el.classList.contains('open');
+    
+    // Close all
+    document.querySelectorAll('.myth-item').forEach(item => {
+      item.classList.remove('open');
+      item.querySelector('.myth-answer').style.maxHeight = '0';
+    });
+
+    // Open clicked if it was closed
+    if (!isOpen) {
+      el.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
